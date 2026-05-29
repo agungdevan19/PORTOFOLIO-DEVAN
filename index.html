@@ -13,24 +13,42 @@
 <div class="cursor-ring" id="cursorRing"></div>
 
 <nav id="navbar">
-  <a href="#hero" class="nav-logo">PORTOFOLIO <span></span></a>
-  <ul class="nav-links">
+
+  <!-- LOGO -->
+  <a href="#hero" class="nav-logo">
+    PORTOFOLIO <span></span>
+  </a>
+
+  <!-- NAVIGATION -->
+  <ul class="nav-links" id="navLinks">
     <li><a href="#about">About</a></li>
     <li><a href="#projects">Project</a></li>
     <li><a href="#process">Process</a></li>
     <li><a href="#contact">Contact</a></li>
+
+    <!-- MOBILE CV BUTTON -->
+    <li class="mobile-cv">
+      <a href="assets/images/cv-agung-devan.pdf"
+         download="CV-Agung-Devan-Prawira.pdf">
+         Download CV
+      </a>
+    </li>
   </ul>
+
+  <!-- DESKTOP CV -->
   <a href="assets/images/cv-agung-devan.pdf"
-   class="nav-cta"
-   download="CV-Agung-Devan-Prawira.pdf">
-   Download CV
-</a>
+     class="nav-cta"
+     download="CV-Agung-Devan-Prawira.pdf">
+     Download CV
+  </a>
+
   <!-- HAMBURGER -->
-<div class="menu-toggle" id="menuToggle">
-  <span></span>
-  <span></span>
-  <span></span>
-</div>
+  <div class="menu-toggle" id="menuToggle">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
 </nav>
 
 <section id="hero">
@@ -368,6 +386,7 @@ menuToggle.addEventListener("click", () => {
   navLinks.classList.toggle("active");
 });
 
+/* CLOSE MENU AFTER CLICK */
 document.querySelectorAll(".nav-links a").forEach(link => {
   link.addEventListener("click", () => {
     menuToggle.classList.remove("active");
