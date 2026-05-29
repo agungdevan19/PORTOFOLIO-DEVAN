@@ -909,3 +909,93 @@ footer a:hover { color: var(--accent); }
     font-weight: 500;
   }
 }
+@media (max-width: 768px) {
+
+  body {
+    cursor: auto !important;
+  }
+
+  /* HAPUS CUSTOM CURSOR DI MOBILE */
+  .cursor,
+  .cursor-ring {
+    display: none !important;
+  }
+
+  * {
+    cursor: auto !important;
+  }
+
+  /* TAMPILKAN HAMBURGER */
+  .menu-toggle {
+    display: flex;
+  }
+
+  /* HIDE DESKTOP CV */
+  .nav-cta {
+    display: none;
+  }
+
+  /* MOBILE MENU */
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+
+    width: 260px;
+    height: 100vh;
+
+    background: rgba(10,10,15,0.98);
+    backdrop-filter: blur(20px);
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 100px 2rem 2rem;
+    gap: 1.5rem;
+
+    list-style: none;
+
+    transition: 0.4s ease;
+    z-index: 1000;
+
+    border-left: 1px solid rgba(255,255,255,0.08);
+  }
+
+  /* MENU ACTIVE */
+  .nav-links.active {
+    right: 0;
+  }
+
+  .nav-links li {
+    width: 100%;
+  }
+
+  .nav-links a {
+    color: var(--text);
+    text-decoration: none;
+    font-size: 15px;
+    display: block;
+    width: 100%;
+  }
+
+  /* MOBILE CV BUTTON */
+  .mobile-cv {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255,255,255,0.08);
+  }
+
+  .mobile-cv a {
+    background: var(--accent);
+    color: white !important;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0.9rem 1rem;
+    border-radius: 10px;
+
+    font-weight: 500;
+  }
+}
